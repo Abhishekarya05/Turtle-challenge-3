@@ -1,0 +1,21 @@
+from turtle import Turtle, Screen
+import random
+
+
+timmy_turtle = Turtle()
+timmy_turtle.shape("turtle")
+timmy_turtle.color("red")
+
+olours = ["CornflowerBlue", "DarkOrchid", "IndianRed", "DeepSkyBlue", "LightSeaGreen", "wheat", "SlateGray", "SeaGreen"]
+def shapes (num_sides):
+    angle = 360 / num_sides
+    for _ in range(num_sides):
+        timmy_turtle.forward(100)
+        timmy_turtle.right(angle)
+
+for _ in range(3,11):
+    timmy_turtle.color(random.choice(colours))
+    shapes(_)
+    
+screen = Screen()
+screen.exitonclick()    
